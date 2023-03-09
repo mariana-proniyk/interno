@@ -1,0 +1,40 @@
+$icons-font: "icons";
+
+@font-face {
+    font-family: $icons-font;
+    src: url("../../public/fonts/icons/icons.ttf?ee582c3d6c1013e44d2ab818a62956d0") format("truetype"),
+url("../../public/fonts/icons/icons.woff?ee582c3d6c1013e44d2ab818a62956d0") format("woff"),
+url("../../public/fonts/icons/icons.woff2?ee582c3d6c1013e44d2ab818a62956d0") format("woff2"),
+url("../../public/fonts/icons/icons.svg?ee582c3d6c1013e44d2ab818a62956d0#icons") format("svg");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$icons-map: (
+    "arrow-right": "\f101",
+    "arrow": "\f102",
+    "phone": "\f103",
+    "search": "\f104",
+);
+
+.icon-arrow-right:before {
+    content: map-get($icons-map, "arrow-right");
+}
+.icon-arrow:before {
+    content: map-get($icons-map, "arrow");
+}
+.icon-phone:before {
+    content: map-get($icons-map, "phone");
+}
+.icon-search:before {
+    content: map-get($icons-map, "search");
+}

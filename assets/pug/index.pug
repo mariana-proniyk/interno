@@ -1,0 +1,49 @@
+include components/index.pug
+
+doctype html
+html(lang='en')
+    +Head('Home page')
+    body
+        include parts/header.pug
+        section.home-hero.content-center  
+            .wrap-content   
+                h1 Let Your Home Be Unique
+                p There are many variations of the passages of lorem Ipsum fromavailable, majority.
+                +Button('Get Started', 'is-dark', 'icon-arrow-right')
+        section.work-section.content-center 
+            +WorkItem('Project Plan')
+            +WorkItem('Interior Work')
+            +WorkItem('Realization')
+        section.about-us.content-center
+            .content    
+                h2 We Create The Art Of Stylish Living Stylishly
+                p It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.
+                .contacts   
+                    .icon 
+                        i.icon-phone
+                    .number     
+                        a(href="tel:012345678") 012345678
+                        span Call Us Anytime
+                +Button('Get Free Estimate','is-dark','icon-arrow-right')
+            img(src="./public/images/about-us.png", alt="")  
+        section.reviews-section.content-center
+            h2 What the People Thinks About Us 
+            .cards 
+                +ReviewCard('Nattasha Mith','Sydney, USA','Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.')  
+                +ReviewCard('Raymond Galario','Sydney, Australia','Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled it to make a type book.')  
+                +ReviewCard('Benny Roll','Sydney, New York','Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been scrambled.')   
+        section.client-section.content-center
+            img(src="./public/images/client/01.png", alt="") 
+            img(src="./public/images/client/02.png", alt="")
+            img(src="./public/images/client/03.png", alt="")
+            img(src="./public/images/client/04.png", alt="")
+            img(src="./public/images/client/05.png", alt="")
+        section.project-section.content-center
+            h2 Follow Our Projects
+            p It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.
+            .cards 
+                +ProjectItem('Modern Kitchan')
+                +ProjectItem('Modern Badroom')
+                +ProjectItem('Modern Kitchan')
+                +ProjectItem('Modern Living room')
+        include parts/footer.pug
